@@ -15,15 +15,6 @@ class SpeechToText:
     def __init__(self):
         print("Initializing speech to text...")
 
-    def speech_to_text(self, audio_data):
-        try:
-            print("Converting...")
-            text = r.recognize_google(self, audio_data)
-            return text
-        except sr.UnknownValueError:
-            print("Could not parse audio...")
-            return 0
-
     def get_audio(self, is_loopback, device):
         if is_loopback:
             """
@@ -72,6 +63,15 @@ class SpeechToText:
                 print("\nListening...")
                 audio_data = r.listen(source)
                 return audio_data
+
+    def speech_to_text(self, audio_data):
+        try:
+            print("Converting...")
+            text = r.recognize_google(audio_data=audio_data)
+            return text
+        except sr.UnknownValueError:
+            print("Could not parse audio...")
+            return 0
 
     def text_to_file(self, text, file):
         if text == 0:

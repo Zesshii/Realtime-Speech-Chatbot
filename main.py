@@ -1,4 +1,5 @@
 import speech_to_text as stt
+import get_input_output_devices as iod
 
 """
     ** STT Chatbot **
@@ -26,25 +27,35 @@ import speech_to_text as stt
         3. The device you want is 'Microphone Array (something, 'Stereo Mix (Realtek(R) Audio)'
 
     TO DO:
-        Create Chatbot that takes text as input
-        Get the Chatbot output and input that through a text to speech program
+        -When we want to use our speakers as input
+            Perhaps instead of using the microphone as the input for our device speakers we instead,
+            Open a stream of our desktop audio using pyaudio and listen to that instead.
+        -Create Chatbot that takes text as input
+        -Get the Chatbot output and input that through a text to speech program
 """
 
-OUTPUT_FILE = "C:/Users/dylan/PycharmProjects/SpeechToText/speech.json"  # must be json file
-DEVICE_INDEX = 2
+OUTPUT_FILE = "D:\Programming\PyCharm\PyCharmProjects\PROJECTS\Chatbot\Realtime-Speech-Chatbot\speech.json"  # must be json file
 
 stt = stt.SpeechToText()
+iod = iod.Devices()
+
+# ask user if they want to see list of available input devices
+look_devices = input("Do you want to see a list of available devices? (Y/N): ").lower()
+if look_devices == "y":
+    iod.get_devices()
+
+device_index = int(input("\nEnter the device index: "))
 
 # ask user if using speakers as input
 loopback = False
-is_loopback = input("Do you want to use loopback to record from speakers? (Y/N): ").lower()
+is_loopback = input("\nDo you want to use loopback to record from speakers? (Y/N): ").lower()
 if is_loopback == "y":
     loopback = True
 
 # run program
 running = True
 while running:
-    audio = stt.get_audio(is_loopback=loopback, device=DEVICE_INDEX)
+    audio = stt.get_audio(is_loopback=loopback, device=device_index)
     text = stt.speech_to_text(audio_data=audio)
     stt.text_to_file(text=text, file=OUTPUT_FILE)
     stt.read_text(file=OUTPUT_FILE)  # this displays the last line added to the json file
