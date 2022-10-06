@@ -7,4 +7,3 @@ class Devices:
     def get_devices(self):
         for i, j in enumerate(self.device_list):
             print(f"Device: {j} || Index: {i}")
-
