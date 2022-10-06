@@ -1,6 +1,8 @@
 # Realtime-Speech-Chatbot
 This program takes microphone input in which a chatbot outputs an appropriate response.
 
+Current version is able to take microphone input, convert that input into text, save that text into json file, and output the text to the user.
+
 TO DO:
 1) When we want to use our speakers as input:
 Perhaps instead of using stereo mix as the input for our device speakers we instead,
