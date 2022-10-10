@@ -1,4 +1,5 @@
 import random
+import time
 import json
 import pickle
 import numpy as np
@@ -7,6 +8,9 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
+import speech_to_text as stt
+
+print("Initializing bot...")
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
@@ -48,13 +52,19 @@ def get_response(intents_list, intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
-            break
-    return result
+            return result
 
-print("GO! Bot is running.")
+stt = stt.SpeechToText()
 
-while True:
-    message = input("")
+def chatbot_response(message):
     ints = predict_class(message)
     res = get_response(ints, intents)
     print(res)
+    time.sleep(5)
+
+def chatbot_debug():
+    while True:
+        message = input("\nEnter your message: ")
+        ints = predict_class(message)
+        res = get_response(ints, intents)
+        print(res)

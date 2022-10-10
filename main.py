@@ -1,5 +1,6 @@
 import speech_to_text as stt
 import get_input_output_devices as iod
+import chatbot as cb
 
 """
     ** STT Chatbot **
@@ -35,10 +36,15 @@ import get_input_output_devices as iod
         -Get the Chatbot output and input that through a text to speech program
 """
 
-OUTPUT_FILE = "D:\Programming\PyCharm\PyCharmProjects\PROJECTS\Chatbot\Realtime-Speech-Chatbot\speech.json"  # must be json file
+OUTPUT_FILE = "speech.json"  # must be json file
 
 stt = stt.SpeechToText()
 iod = iod.Devices()
+
+# ask user if they want to enter the text-based chatbot
+text_based_choice = input("Do you want to use the text-based chatbot? (Y/N): ").lower()
+if text_based_choice == "y":
+    cb.chatbot_debug()
 
 # ask user if they want to see list of available input devices
 look_devices = input("Do you want to see a list of available devices? (Y/N): ").lower()
@@ -59,7 +65,9 @@ while running:
     audio = stt.get_audio(is_loopback=loopback, device=device_index)
     text = stt.speech_to_text(audio_data=audio)
     stt.text_to_file(text=text, file=OUTPUT_FILE)
-    stt.read_text(file=OUTPUT_FILE)  # this displays the last line added to the json file
+    message = stt.read_text(file=OUTPUT_FILE)  # this displays the last line added to the json file
+    response = cb.chatbot_response(message=message)
 
 # now we need to input this text into the NLP program
+
 
