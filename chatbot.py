@@ -14,7 +14,7 @@ intents = json.loads(open("intents.json").read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 
-model = load_model('chatbot_model.model')
+model = load_model('chatbot_model.h5')
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -28,7 +28,7 @@ def bag_of_words(sentence):
         for i, word in enumerate(words):
             if word == w:
                 bag[i] = 1
-    return np.array[bag]
+    return np.array(bag)
 
 def predict_class(sentence):
     bow = bag_of_words(sentence)
@@ -42,3 +42,19 @@ def predict_class(sentence):
         return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
     return return_list
 
+def get_response(intents_list, intents_json):
+    tag = intents_list[0]['intent']
+    list_of_intents = intents_json['intents']
+    for i in list_of_intents:
+        if i['tag'] == tag:
+            result = random.choice(i['responses'])
+            break
+    return result
+
+print("GO! Bot is running.")
+
+while True:
+    message = input("")
+    ints = predict_class(message)
+    res = get_response(ints, intents)
+    print(res)
