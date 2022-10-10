@@ -14,3 +14,6 @@ TO DO:
 2) Create Chatbot that takes text as input and outputs a text response **COMPLETED**
  
 3) Get the Chatbot output and input that through a text to speech program **INCOMPLETE**
+
+TO DO LATER:
+1) Clean and reformat code. **PENDING**
