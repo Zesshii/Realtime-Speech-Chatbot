@@ -98,6 +98,8 @@ class SpeechToText:
         try:
             with open(file, mode='r', encoding='utf-8') as data:
                 new_data = json.load(data)
-                print(new_data[-1]['text'])
+                message = new_data[-1]['text']
+                print("Heard this:", message)
+                return message
         except FileNotFoundError:
             print("File not found...")
