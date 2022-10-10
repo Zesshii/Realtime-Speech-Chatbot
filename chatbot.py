@@ -8,7 +8,6 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
-import speech_to_text as stt
 
 print("Initializing bot...")
 
@@ -53,8 +52,6 @@ def get_response(intents_list, intents_json):
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             return result
-
-stt = stt.SpeechToText()
 
 def chatbot_response(message):
     ints = predict_class(message)
