@@ -2,7 +2,7 @@
 This program takes microphone input in which a chatbot outputs an appropriate response.
 
 Current version is able to take microphone input, convert that input into text, save that text into json file, and output the text to the user.
-In addition, that text is then processed through an intent-based Chatbot which outputs an appropriate text response. 
+In addition, that text is then processed through an intent-based Chatbot which outputs an appropriate text or speech response.
 
 TO DO:
 1) Create speech to text program that takes user speech and converts it to text. **COMPLETED**
