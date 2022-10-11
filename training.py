@@ -12,7 +12,7 @@ from tensorflow.keras.optimizers import SGD
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open("intents.json").read())
+intents = json.loads(open("training_data/intents.json").read())
 
 words = []
 classes = []
@@ -33,8 +33,8 @@ print(words)
 
 classes = sorted(set(classes))
 
-pickle.dump(words, open('words.pkl', 'wb'))  # wb = writing binaries
-pickle.dump(classes, open('classes.pkl', 'wb'))
+pickle.dump(words, open(file="training_data/words.pkl", mode="wb"))  # wb = writing binaries
+pickle.dump(classes, open(file="training_data/classes.pkl", mode="wb"))
 
 training = []
 output_empty = [0] * len(classes)
@@ -58,16 +58,16 @@ train_y = list(training[:, 1])
 
 # build nnm
 model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation="relu"))
 model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
+model.add(Dense(64, activation="relu"))
 model.add(Dropout(0.5))
-model.add(Dense(len(train_y[0]), activation='softmax'))
+model.add(Dense(len(train_y[0]), activation="softmax"))
 
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
-model.save('chatbot_model.h5', hist)
-print('Done')
+model.save("training_data/chatbot_model.h5", hist)
+print("Done")
 
