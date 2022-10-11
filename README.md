@@ -6,8 +6,12 @@ In addition, that text is then processed through an intent-based Chatbot which o
 
 # Speaker Output Setup
 a) If you want speaker output as input you must configure your sound devices to the following:
+**Windows 11 Setup VB-Audio Cable**
+1. Download VB-Audio Cable here: https://vb-audio.com/Cable/index.htm
+2. In system -> sound settings, set your input device to "Cable Output" (VB-Audio Cable)
+3. Also in system -> sound settings, set your output device to "Cable Input" (VB-Audio Cable)
 
-**Windows 11 Setup**
+**Windows 11 Setup Microphone Array**
 1. In system -> sound settings your input device must be set to microphone array.
 2. Now, enable stereo mix by going to system -> sound -> all sound devices.
 3. Select stereo mix and press "Allow".
