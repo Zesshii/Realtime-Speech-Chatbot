@@ -11,6 +11,7 @@ a) You must configure your sound devices to the following:
 1. In system -> sound settings your input device must be set to microphone array.
 2. Now, enable stereo mix by going to system -> sound -> all sound devices.
 3. Select stereo mix and press "Allow".
+
 **Windows 10 Setup**
 1. Right-click the Sound icon at the right corner of Windows taskbar and click Sounds option.
 2. Click Recording tab and you can see Stereo Mix of Realtek Audio.
