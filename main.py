@@ -44,19 +44,33 @@ iod = iod.Devices()
 
 # ask user if they want to enter the text-based chatbot
 text_based_choice = input("Do you want to use the text-based chatbot? (Y/N): ").lower()
+while text_based_choice != "y" and text_based_choice != "n":
+    text_based_choice = input("Incorrect input! Please enter Y or N: ").lower()
 if text_based_choice == "y":
     cb.chatbot_debug()
 
 # ask user if they want to see list of available input devices
 look_devices = input("Do you want to see a list of available devices? (Y/N): ").lower()
+while look_devices != "y" and look_devices != "n":
+    look_devices = input("Incorrect input! Please enter Y or N: ").lower()
 if look_devices == "y":
     iod.get_devices()
 
-device_index = int(input("\nEnter the device index: "))
+# ask user to enter their device index
+device_index = 1  # default
+while True:
+    try:
+        device_index = int(input("\nEnter the device index: "))
+        break
+    except ValueError:
+        print("Please enter numbers only!")
+        continue
 
 # ask user if using speakers as input
 loopback = False
 is_loopback = input("\nDo you want to use loopback to record from speakers? (Y/N): ").lower()
+while is_loopback != "y" and is_loopback != "n":
+    is_loopback = input("\nDo you want to use loopback to record from speakers? (Y/N): ").lower()
 if is_loopback == "y":
     loopback = True
 
