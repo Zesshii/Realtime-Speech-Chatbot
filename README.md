@@ -37,3 +37,6 @@ b) Now, define the OUTPUT_FILE in main.py and find your device_index:
 # TO DO LATER:
 1) Clean and reformat code **PENDING**
 2) Program GUI **PENDING**
+
+# Resources and Acknowledgements
+- Credit to NeuralNine for the intent-based Chatbot see his video tutorial here: <https://www.youtube.com/watch?v=1lwddP0KUEg&t=450s>
