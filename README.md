@@ -30,7 +30,7 @@ b) Now, define the OUTPUT_FILE in main.py and find your device_index:
 
 # TO DO:
 1) Create speech to text program that takes user speech and converts it to text. **COMPLETED**
-   - Be able to take speaker output **PARTIALLY SOLVED** (is reliant on setting your input to microphone array)
+   - Be able to take speaker output **PARTIALLY SOLVED** (is reliant on setting your input to microphone array or vb audio cable)
    - Perhaps instead of using stereo mix as the input for our device speakers we instead,
      open a stream of our desktop audio using pyaudio and listen to that instead.
      if that doesn't work, perhaps attempt to setup a virtual input device using voicemeeter. **UNSOLVED**
