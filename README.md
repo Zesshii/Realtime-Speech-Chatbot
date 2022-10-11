@@ -16,5 +16,5 @@ TO DO:
 3) Get the Chatbot output and input that through a text to speech program **INCOMPLETE**
 
 TO DO LATER:
-1) Clean and reformat code. **PENDING**
-2) Program GUI
+1) Clean and reformat code **PENDING**
+2) Program GUI **PENDING**
