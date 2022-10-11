@@ -17,7 +17,7 @@ a) If you want speaker output as input you must configure your sound devices to 
 2. Now, enable stereo mix by going to system -> sound -> all sound devices.
 3. Select stereo mix and press "Allow".
 
-**Windows 10 Setup Microphone Array**
+**Windows 10 Setup Realtek Audio Stereo Mix**
 1. Right-click the Sound icon at the right corner of Windows taskbar and click Sounds option.
 2. Click Recording tab and you can see Stereo Mix of Realtek Audio.
 3. Right-click Stereo Mix --> Enable. Click Apply and click OK to enable Realtek Stereo Mix in Windows 10.
