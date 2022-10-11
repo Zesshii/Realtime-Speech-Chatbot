@@ -9,7 +9,6 @@ from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
 
-
 print("Initializing bot...")
 
 lemmatizer = WordNetLemmatizer()
