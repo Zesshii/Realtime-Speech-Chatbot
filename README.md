@@ -4,7 +4,7 @@ This program takes microphone input in which a chatbot outputs an appropriate re
 Current version is able to take microphone input, convert that input into text, save that text into json file, and output the text to the user.
 In addition, that text is then processed through an intent-based Chatbot which outputs an appropriate text or speech response.
 
-# SETUP
+# Setup
 a) You must configure your sound devices to the following:
         ** Windows 11 Setup **
         1. In system -> sound settings your input device must be set to microphone array.
