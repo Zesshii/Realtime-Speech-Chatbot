@@ -17,3 +17,4 @@ TO DO:
 
 TO DO LATER:
 1) Clean and reformat code. **PENDING**
+2) Program GUI
