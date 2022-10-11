@@ -1,4 +1,5 @@
 import speech_to_text as stt
+import text_to_speech as tts
 import get_input_output_devices as iod
 import chatbot as cb
 
@@ -21,11 +22,11 @@ import chatbot as cb
         2. Click Recording tab and you can see Stereo Mix of Realtek Audio.
         3. Right-click Stereo Mix --> Enable. Click Apply and click OK to enable Realtek Stereo Mix in Windows 10.
 
-    b) Now, define the OUTPUT_FILE and DEVICE_INDEX:
+    b) Now, define the OUTPUT_FILE and find your DEVICE_INDEX:
         1. OUTPUT_FILE must be the file location of a file in .json format.
-        2. To find your DEVICE_INDEX run this command in terminal:
-        python -c 'import speech_recognition as sr; print(sr.Microphone.list_microphone_names())' 
-        3. The device you want is 'Microphone Array (something, 'Stereo Mix (Realtek(R) Audio)'
+        2. Run the program, and when prompted say y to see a list of devices.
+        5. Get the index of the Stereo Mix (Realtek(R) Audio) device.
+        6. Input the device index when prompted.
 
     TO DO:
         -When we want to use our speakers as input
@@ -66,8 +67,7 @@ while running:
     text = stt.speech_to_text(audio_data=audio)
     stt.text_to_file(text=text, file=OUTPUT_FILE)
     message = stt.read_text(file=OUTPUT_FILE)  # this displays the last line added to the json file
-    response = cb.chatbot_response(message=message)
-
-# now we need to input this text into the NLP program
+    response = cb.chatbot_response(message=message)  # gets a response from chatbot
+    speech = tts.say(text=response)  # response is converted into audible speech
 
 

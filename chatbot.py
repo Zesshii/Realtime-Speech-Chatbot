@@ -57,7 +57,7 @@ def chatbot_response(message):
     ints = predict_class(message)
     res = get_response(ints, intents)
     print(res)
-    time.sleep(5)
+    return res
 
 def chatbot_debug():
     while True:
