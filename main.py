@@ -12,12 +12,16 @@ import chatbot as cb
     https://www.youtube.com/watch?v=1lwddP0KUEg
     ==========================================================================
     a) You must configure your sound devices to the following:
-        ** Windows 11 Setup **
+        ** Windows 11 Setup VB-Audio Cable**
+        1. In system -> sound settings, set your input device to "Cable Output" (VB-Audio Cable)
+        2. Also in system -> sound settings, set your output device to "Cable Input" (VB-Audio Cable)
+        
+        ** Windows 11 Setup Microphone Array **
         1. In system -> sound settings your input device must be set to microphone array.
         2. Now, enable stereo mix by going to system -> sound -> all sound devices.
         3. Select stereo mix and press "Allow".
 
-        ** Windows 10 Setup **
+        ** Windows 10 Setup Realtek Audio Stereo Mix **
         1. Right-click the Sound icon at the right corner of Windows taskbar and click Sounds option.
         2. Click Recording tab and you can see Stereo Mix of Realtek Audio.
         3. Right-click Stereo Mix --> Enable. Click Apply and click OK to enable Realtek Stereo Mix in Windows 10.
@@ -83,5 +87,3 @@ while running:
     message = stt.read_text(file=OUTPUT_FILE)  # this displays the last line added to the json file
     response = cb.chatbot_response(message=message)  # gets a response from chatbot
     speech = tts.say(text=response)  # response is converted into audible speech
-
-
