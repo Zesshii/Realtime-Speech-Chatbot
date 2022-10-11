@@ -18,10 +18,10 @@ a) You must configure your sound devices to the following:
 3. Right-click Stereo Mix --> Enable. Click Apply and click OK to enable Realtek Stereo Mix in Windows 10.
         
 b) Now, define the OUTPUT_FILE and find your DEVICE_INDEX:
-        1. OUTPUT_FILE must be the file location of a file in .json format.
-        2. Run the program, and when prompted say y to see a list of devices.
-        5. Get the index of the Stereo Mix (Realtek(R) Audio) device.
-        6. Input the device index when prompted.
+1. OUTPUT_FILE must be the file location of a file in .json format.
+2. Run the program, and when prompted say y to see a list of devices.
+5. Get the index of the Stereo Mix (Realtek(R) Audio) device.
+6. Input the device index when prompted.
 
 # TO DO:
 1) Create speech to text program that takes user speech and converts it to text. **COMPLETED**
