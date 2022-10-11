@@ -6,17 +6,16 @@ In addition, that text is then processed through an intent-based Chatbot which o
 
 # Setup
 a) You must configure your sound devices to the following:
-        ** Windows 11 Setup **
+        **Windows 11 Setup**
         1. In system -> sound settings your input device must be set to microphone array.
         2. Now, enable stereo mix by going to system -> sound -> all sound devices.
         3. Select stereo mix and press "Allow".
-
-        ** Windows 10 Setup **
+        **Windows 10 Setup**
         1. Right-click the Sound icon at the right corner of Windows taskbar and click Sounds option.
         2. Click Recording tab and you can see Stereo Mix of Realtek Audio.
         3. Right-click Stereo Mix --> Enable. Click Apply and click OK to enable Realtek Stereo Mix in Windows 10.
-
-    b) Now, define the OUTPUT_FILE and find your DEVICE_INDEX:
+        
+b) Now, define the OUTPUT_FILE and find your DEVICE_INDEX:
         1. OUTPUT_FILE must be the file location of a file in .json format.
         2. Run the program, and when prompted say y to see a list of devices.
         5. Get the index of the Stereo Mix (Realtek(R) Audio) device.
