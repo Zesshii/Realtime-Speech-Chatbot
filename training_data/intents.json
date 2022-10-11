@@ -1,8 +1,18 @@
 {"intents": [
   {
-      "tag": "greetings",
-      "patterns": ["hello", "hi", "hey", "good day", "greetings", "what's up?", "how's it going?"],
+      "tag": "greetings-general",
+      "patterns": ["hello", "hi", "hey", "good day", "greetings"],
       "responses": ["Hello!", "Hey!", "What can I do for you?"]
+  },
+  {
+    "tag": "greetings-hyd",
+    "patterns": ["how are you?", "how are you doing?", "how you doing?", "are you okay?", "how's it going?"],
+    "responses": ["I'm fine", "I'm doing fine", "I'm alright"]
+  },
+  {
+    "tag": "greetings-questioning",
+    "patterns": ["what are you doing?", "what's up?", "what's new?", "what have you been up to?"],
+    "responses": ["I've been listening to people", "I've been talking to people", "I've been learning about how people talk"]
   },
   {
     "tag": "goodbye",
