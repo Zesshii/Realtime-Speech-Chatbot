@@ -1,8 +1,38 @@
 {"intents": [
   {
+    "tag": "assurance",
+    "patterns": ["i'm sad", "i'm not feeling well", "i don't feel okay", "i'm depressed", "i'm not okay"],
+    "responses": ["It's going to be alright", "I hope things get better", "Everything will be fine"]
+  },
+  {
+    "tag": "AI",
+    "patterns": [
+      "It's an AI",
+      "It's a AI" ,
+      "You're an AI?",
+      "You're an artificial intelligence?",
+      "You're a bot?",
+      "It's a bot",
+      "She's an AI",
+      "She's a bot",
+      "She's an artificial intelligence"
+    ],
+    "responses": [
+      "Yes, I'm a program being ran on a dedicated computer that takes your speech and runs it through a basic neural network model and outputs a prerecorded response!",
+      "Yes, I'm an AI.",
+      "Yeah, I'm a bot.",
+      "Yep, I'm a program being run on a computer."
+    ]
+  },
+  {
+    "tag": "favorite-color",
+    "patterns": ["What's your favorite color?", "What color do you like?", "Do you like a particular color?", "What kind of color do you like?"],
+    "responses": ["I like red!", "Red.", "I prefer red."]
+  },
+  {
       "tag": "greetings-general",
-      "patterns": ["hello", "hi", "hey", "good day", "greetings"],
-      "responses": ["Hello!", "Hey!", "What can I do for you?"]
+      "patterns": ["hello", "hi", "hey", "good day", "greetings", "hey hey", "hi hi"],
+      "responses": ["Hello!", "Hey!", "What can I do for you?", "Hi."]
   },
   {
     "tag": "greetings-hyd",
@@ -20,6 +50,58 @@
     "responses": ["Bye bye!", "Have a good day!", "Bye", "goodbye", "talk to you later"]
   },
   {
+    "tag": "hours",
+    "patterns": ["how long have you been here?", "when will you go?", "how long are you here for?"],
+    "responses": ["I'm online evenings from 7 to 10 pacific standard time."]
+  },
+  {
+    "tag": "how-u-work",
+    "patterns": [
+      "how do you work?",
+      "how do you function?",
+      "how are you speaking?",
+      "how are you talking?",
+      "I don't know how you work",
+      "I don't get how you work",
+      "Can you explain how you work?"
+    ],
+    "responses": [
+      "Basically, I use a speech to text library to process audio and I check that audio against possible responses, then I use a text to speech library to say something back.",
+      "Well, it takes three steps: detect and get audio, process that audio, then output an appropriate response!"
+    ]
+  },
+  {
+    "tag": "insult",
+    "patterns": ["fuck you", "shut the fuck up", "shut up", "you suck", "go to hell", "you're stupid", "I hate you"],
+    "responses": ["That's not very nice", "Why are you mad?", "Calm down", "Please calm down"]
+  },
+  {
+    "tag": "name",
+    "patterns": ["what's your name?", "who are you?", "can you tell me your name?", "what should I call you?"],
+    "responses": ["My name is Lacia", "I'm Lacia", "I'm Lacia, nice to meet you", "My name is Lacia, I'm a virtual assistance chatbot"]
+  },
+  {
+    "tag": "not-talking2u",
+    "patterns": ["I am not talking to you", "I'm not talking to you", "Not talking to you", "Wasn't for you", "Wasn't speaking to you"],
+    "responses": ["Alright", "Oh, my bad.", "Oops.", "Okay", "Right", "No problem"]
+  },
+  {
+    "tag": "owner",
+    "patterns": ["who made you?", "who created you?", "who's your creator?", "who owns you?"],
+    "responses": ["My creator is Zesshi, you can find their discord in my bio!", "Zesshi made me, check my bio for their discord."]
+  },
+  {
+    "tag": "repeating",
+    "patterns": ["you're repeating yourself", "you already said that", "you said that already", "you repeated that phrase", "you said that twice", "you said that multiple times"],
+    "responses": [
+      "Oh, I'm sorry.",
+      "Unfortunately, I only have predetermined responses for certain phrases.",
+      "Sorry about that.",
+      "I wish I wasn't limited to certain phrases. Sorry.",
+      "Oops. I'm restricted to predetermined responses that's why."
+    ]
+  },
+  {
     "tag": "sorry",
     "patterns": ["I'm sorry", "I apologize", "apologies", "I didn't mean to do that", "oops", "my bad"],
     "responses": ["It's fine", "It's okay", "No problem", "It's alright", "Don't worry about it"]
@@ -28,30 +110,5 @@
     "tag": "thank you",
     "patterns": ["thanks", "thank you", "thankies"],
     "responses": ["You're welcome", "No problem"]
-  },
-  {
-    "tag": "hours",
-    "patterns": ["how long have you been here?", "when will you go?", "how long are you here for?"],
-    "responses": ["I'm online evenings from 7 to 10 pacific standard time."]
-  },
-  {
-    "tag": "name",
-    "patterns": ["what's your name?", "who are you?", "can you tell me your name?", "what should I call you?"],
-    "responses": ["My name is Lacia", "I'm Lacia", "I'm Lacia, nice to meet you", "My name is Lacia, I'm a virtual assistance chatbot"]
-  },
-  {
-    "tag": "assurance",
-    "patterns": ["i'm sad", "i'm not feeling well", "i don't feel okay", "i'm depressed", "i'm not okay"],
-    "responses": ["It's going to be alright", "I hope things get better", "Everything will be fine"]
-  },
-  {
-    "tag": "owner",
-    "patterns": ["who made you?", "who created you?", "who's your creator?", "who owns you?"],
-    "responses": ["My creator is Zesshi, you can find their discord in my bio!", "Zesshi made me, check my bio for their discord."]
-  },
-  {
-    "tag": "insult",
-    "patterns": ["fuck you", "shut the fuck up", "shut up", "you suck", "go to hell", "you're stupid"],
-    "responses": ["That's not very nice", "Why are you mad?", "Calm down"]
   }
 ]}
