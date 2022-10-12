@@ -4,7 +4,6 @@ import get_input_output_devices as iod
 import chatbot as cb
 import pre_config_inputs as pci
 
-# enter your json file path here to store speech heard
 OUTPUT_FILE = "speech.json"
 
 stt = stt.SpeechToText()
