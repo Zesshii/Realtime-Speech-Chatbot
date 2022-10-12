@@ -4,7 +4,8 @@ import get_input_output_devices as iod
 import chatbot as cb
 import pre_config_inputs as pci
 
-OUTPUT_FILE = "speech.json"  # must be json file
+# enter your json file path here to store speech heard
+OUTPUT_FILE = "speech.json"
 
 stt = stt.SpeechToText()
 iod = iod.Devices()
@@ -12,8 +13,8 @@ iod = iod.Devices()
 # pre-config input
 pci.is_text_based()
 pci.see_device_list()
-device_index = pci.enter_device_index()
-loopback = pci.is_speaker_output()
+device_index = pci.enter_device_index()  # returns index entered
+loopback = pci.is_speaker_output()  # returns true or false
 
 # run program
 running = True
