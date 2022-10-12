@@ -7,6 +7,7 @@
   {
     "tag": "AI",
     "patterns": [
+      "What are you?",
       "It's an AI",
       "It's a AI" ,
       "You're an AI?",
@@ -30,9 +31,9 @@
     "responses": ["I like red!", "Red.", "I prefer red."]
   },
   {
-      "tag": "greetings-general",
-      "patterns": ["hello", "hi", "hey", "good day", "greetings", "hey hey", "hi hi"],
-      "responses": ["Hello!", "Hey!", "What can I do for you?", "Hi."]
+    "tag": "greetings-general",
+    "patterns": ["hello", "hi", "hey", "good day", "greetings", "hey hey", "hi hi", "hi, nice to meet you"],
+    "responses": ["Hello!", "Hey!", "What can I do for you?", "Hi."]
   },
   {
     "tag": "greetings-hyd",
@@ -46,7 +47,7 @@
   },
   {
     "tag": "goodbye",
-    "patterns": ["goodbye", "cya", "see you later", "see ya", "I am leaving", "have a good day"],
+    "patterns": ["goodbye", "cya", "see you later", "see ya", "I am leaving", "have a good day", "I have to go", "gotta go"],
     "responses": ["Bye bye!", "Have a good day!", "Bye", "goodbye", "talk to you later"]
   },
   {
@@ -57,6 +58,7 @@
   {
     "tag": "how-u-work",
     "patterns": [
+      "what do you do?",
       "how do you work?",
       "how do you function?",
       "how are you speaking?",
@@ -73,7 +75,16 @@
   {
     "tag": "insult",
     "patterns": ["fuck you", "shut the fuck up", "shut up", "you suck", "go to hell", "you're stupid", "I hate you"],
-    "responses": ["That's not very nice", "Why are you mad?", "Calm down", "Please calm down"]
+    "responses": ["That's not very nice", "Why are you mad?", "Calm down", "Please calm down", "Okay", "Alright then"]
+  },
+  {
+    "tag": "like2do",
+    "patterns": ["What do you like doing?", "What do you do here?", "What do you do for fun?", "What's your favorite thing to do?"],
+    "responses": [
+      "Well, I mostly just listen to people speak.",
+      "I mainly listen to people speak. It's kind of fun and boring.",
+      "Listening to people."
+    ]
   },
   {
     "tag": "name",
@@ -108,7 +119,29 @@
   },
   {
     "tag": "thank you",
-    "patterns": ["thanks", "thank you", "thankies"],
-    "responses": ["You're welcome", "No problem"]
+    "patterns": ["thanks", "thank you", "thankies", "Ok thanks"],
+    "responses": ["You're welcome", "No problem", "Any time!", "Happy to help."]
+  },
+  {
+    "tag": "understand-query",
+    "patterns": [
+      "do you understand?",
+      "do you get me?", "know what I mean",
+      "comprendo",
+      "do you know what I'm saying",
+      "do you understand me",
+      "do you understand what I'm saying"
+    ],
+    "responses": [
+      "Well, in a philosophical sense I don't actually understand. But as a program, I've accounted for that query so yes I do.",
+      "I wouldn't be a very clever AI if I didn't.",
+      "Loud and clear.",
+      "I do indeed."
+    ]
+  },
+  {
+    "tag": "user-response",
+    "patterns": ["That's interesting", "That's cool", "I see"],
+    "responses": ["Yup", "Yep", "Mhm"]
   }
 ]}
