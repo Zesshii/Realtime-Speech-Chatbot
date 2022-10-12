@@ -71,3 +71,4 @@ def chatbot_debug():
         ints = predict_class(message)
         res = get_response(ints, intents)
         print(res)
+
