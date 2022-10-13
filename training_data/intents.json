@@ -163,7 +163,7 @@
   },
   {
     "tag": "user-response",
-    "patterns": ["That's interesting", "That's cool", "I see"],
+    "patterns": ["That's interesting", "That's cool", "I see", "Oh I see"],
     "responses": ["Yup", "Yep", "Mhm"]
   }
 ]}
