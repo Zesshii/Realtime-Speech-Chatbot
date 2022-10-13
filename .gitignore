@@ -6519,3 +6519,4 @@ gradle-app.setting
 # avoid ignoring these files
 !training_data
 !pre_config_inputs.py
+!queries.py
