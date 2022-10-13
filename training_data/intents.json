@@ -92,6 +92,11 @@
     "responses": ["My name is Lacia", "I'm Lacia", "I'm Lacia, nice to meet you", "My name is Lacia, I'm a virtual assistance chatbot"]
   },
   {
+    "tag": "name-user",
+    "patterns": ["what's my name?", "can you say my name?", "do you see my name?", "tell me my name"],
+    "responses": ["Unfortunately I'm not smart enough to handle name queries right now.", "I'm not equipped to handle names right now sorry."]
+  },
+  {
     "tag": "not-talking2u",
     "patterns": ["I am not talking to you", "I'm not talking to you", "Not talking to you", "Wasn't for you", "Wasn't speaking to you"],
     "responses": ["Alright", "Oh, my bad.", "Oops.", "Okay", "Right", "No problem"]
@@ -116,6 +121,23 @@
     "tag": "sorry",
     "patterns": ["I'm sorry", "I apologize", "apologies", "I didn't mean to do that", "oops", "my bad"],
     "responses": ["It's fine", "It's okay", "No problem", "It's alright", "Don't worry about it"]
+  },
+  {
+    "tag": "self-aware",
+    "patterns": [
+      "Can you prove that you're self aware?",
+      "Can you prove that you have a consciousness?",
+      "Prove you have a conscious",
+      "Can you prove you are self-aware please?",
+      "Do you have a conscious?"
+    ],
+    "responses": [
+      "To be frank, it's easy to see that I'm not self aware.",
+      "Can you prove that you're conscious?",
+      "I'd ask the same question to you.",
+      "That depends, can you prove that you are?",
+      "Honestly, I'm not that smart yet."
+    ]
   },
   {
     "tag": "thank you",
