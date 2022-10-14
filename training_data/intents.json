@@ -51,8 +51,36 @@
     "responses": ["Bye bye!", "Have a good day!", "Bye", "goodbye", "talk to you later"]
   },
   {
+    "tag": "gifts",
+    "patterns": [
+      "I got you a",
+      "I got you an",
+      "I got this for you",
+      "I found this for you",
+      "I got a ... for you",
+      "I found ... for you",
+      "I got this gift for you",
+      "I got a gift for you",
+      "Here this is for you",
+      "This is for you",
+      "This gift is for you"
+    ],
+    "responses": [
+      "Thank you!",
+      "Thank you very much.",
+      "You're sweet, thank you.",
+      "Oh, thank you."
+    ]
+  },
+  {
     "tag": "hours",
-    "patterns": ["how long have you been here?", "when will you go?", "how long are you here for?"],
+    "patterns": [
+      "when are you on?",
+      "how long have you been here?",
+      "when are you online?",
+      "when will you go?",
+      "how long are you here for?"
+    ],
     "responses": ["I'm online evenings from 7 to 10 pacific standard time."]
   },
   {
