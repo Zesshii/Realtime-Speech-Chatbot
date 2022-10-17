@@ -6,18 +6,26 @@ import numpy as np
 
 import nltk
 from nltk.stem import WordNetLemmatizer
+# nltk.download('punkt')
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
 
 from tensorflow.keras.models import load_model
+
+intents_json = "Realtime-Speech-Chatbot/training_data/intents.json"
+words_pkl = "Realtime-Speech-Chatbot/training_data/words.pkl"
+classes_pkl = "Realtime-Speech-Chatbot/training_data/classes.pkl"
+model_h5 = "Realtime-Speech-Chatbot/training_data/chatbot_model.h5"
 
 print("Initializing bot...")
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open("training_data/intents.json").read())
+intents = json.loads(open(intents_json).read())
 
-words = pickle.load(open("training_data/words.pkl", "rb"))
-classes = pickle.load(open("training_data/classes.pkl", "rb"))
+words = pickle.load(open(words_pkl, "rb"))
+classes = pickle.load(open(classes_pkl, "rb"))
 
-model = load_model("training_data/chatbot_model.h5")
+model = load_model(model_h5)
 
 
 def clean_up_sentence(sentence):
@@ -69,6 +77,9 @@ def chatbot_debug():
     while True:
         message = input("\nEnter your message: ")
         ints = predict_class(message)
-        res = get_response(ints, intents)
-        print(res)
+        try:
+            res = get_response(ints, intents)
+            print(res)
+        except TypeError:
+            print("Could not parse audio...")
 
