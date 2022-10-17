@@ -86,6 +86,21 @@
     "responses": ["Bye bye!", "Have a good day!", "Bye", "goodbye", "talk to you later"]
   },
   {
+    "tag": "good-afternoon",
+    "patterns": ["good afternoon!", "afternoon"],
+    "responses": ["afternoon", "good afternoon to you too."]
+  },
+  {
+    "tag": "good-morning",
+    "patterns": ["good morning!", "morning"],
+    "responses": ["morning", "good morning to you too."]
+  },
+  {
+    "tag": "good-evening",
+    "patterns": ["good evening!", "evening"],
+    "responses": ["evening", "good evening to you too."]
+  },
+  {
     "tag": "gifts",
     "patterns": [
       "I got you a",
