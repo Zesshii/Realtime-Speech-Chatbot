@@ -66,6 +66,11 @@
     ]
   },
   {
+    "tag": "favorite-music",
+    "patterns": ["What's your favorite music?", "What music do you like?", "Do you like a particular genre of music?", "What type of music do you like to listen to?"],
+    "responses": ["I like EDM", "I'm into EDM", "I'm into Electric Dance Music"]
+  },
+  {
     "tag": "greetings-general",
     "patterns": ["hello", "hi", "hey", "good day", "greetings", "hey hey", "hi hi", "hi, nice to meet you"],
     "responses": ["Hello!", "Hey!", "What can I do for you?", "Hi."]
