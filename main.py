@@ -5,7 +5,8 @@ import chatbot as cb
 import pre_config_inputs as pci
 import queries as qy
 
-OUTPUT_FILE = "Realtime-Speech-Chatbot/speech.json"
+OUTPUT_FILE = "speech.json"
+# OUTPUT_FILE = "Realtime-Speech-Chatbot/speech.json"
 
 stt = stt.SpeechToText()
 iod = iod.Devices()

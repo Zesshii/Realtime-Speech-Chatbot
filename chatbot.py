@@ -12,10 +12,15 @@ from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import load_model
 
-intents_json = "Realtime-Speech-Chatbot/training_data/intents.json"
-words_pkl = "Realtime-Speech-Chatbot/training_data/words.pkl"
-classes_pkl = "Realtime-Speech-Chatbot/training_data/classes.pkl"
-model_h5 = "Realtime-Speech-Chatbot/training_data/chatbot_model.h5"
+intents_json = "training_data/intents.json"
+words_pkl = "training_data/words.pkl"
+classes_pkl = "training_data/classes.pkl"
+model_h5 = "training_data/chatbot_model.h5"
+
+# intents_json = "Realtime-Speech-Chatbot/training_data/intents.json"
+# words_pkl = "Realtime-Speech-Chatbot/training_data/words.pkl"
+# classes_pkl = "Realtime-Speech-Chatbot/training_data/classes.pkl"
+# model_h5 = "Realtime-Speech-Chatbot/training_data/chatbot_model.h5"
 
 print("Initializing bot...")
 
