@@ -240,6 +240,11 @@
     "responses": ["It's fine", "It's okay", "No problem", "It's alright", "Don't worry about it"]
   },
   {
+    "tag": "see-me",
+    "patterns": ["Do you see me?", "Can you see me?", "Can you see me over here?", "Do you see me over here?"],
+    "responses": ["I can say that I can see you. But in reality, I don't handle visual input.", "Not really."]
+  },
+  {
     "tag": "self-aware",
     "patterns": [
       "Can you prove that you're self aware?",
